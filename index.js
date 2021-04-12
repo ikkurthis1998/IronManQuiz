@@ -71,7 +71,7 @@ function final() {
     console.log(chalk.blueBright('Congrats, you got one of the top scores!'));
     console.log(chalk.blueBright('----------------------'));
     console.log('');
-    console.log(chalk.blueBright('Scores: '));
+    console.log(chalk.blueBright('High Scores: '));
     console.log(chalk.blueBright('-------------------------------------'));
     console.log(chalk.blueBright(highscores[0].name + ' ' + highscores[0].score));
     console.log(chalk.blueBright(username + ' ' + score));

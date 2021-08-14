@@ -28,17 +28,23 @@ var quiz = [
   {
     question: "For the cover story who is said to be in the Iron Man suit? ",
     answer: "body guard"
+  },{
+    question: "What is the color of Iron Man\'s suit? ",
+    answer: "red"
+  },{
+    question: " What is Iron Man\'s favourite food?' ",
+    answer: "cheese burger"
   }
 ]
 
 var highscores = [
   {
     name: "Sree",
-    score: 3
+    score: 5
   },
   {
     name: "Karthik",
-    score: 2
+    score: 4
   }
 ]
 
@@ -59,7 +65,7 @@ function play(quiz) {
 }
 
 function game() {
-  for(var i = 0; i < 3; i++) {
+  for(var i = 0; i < 5; i++) {
     play(quiz[i]);
   }
 }
@@ -67,7 +73,7 @@ function game() {
 function final() {
   console.log('');
   console.log(chalk.blueBright('Final Score: ' + score));
-  if (score === 3) {
+  if (score === 5) {
     console.log(chalk.blueBright('Congrats, you got one of the top scores!'));
     console.log(chalk.blueBright('----------------------'));
     console.log('');
@@ -77,7 +83,7 @@ function final() {
     console.log(chalk.blueBright(username + ' ' + score));
     console.log(chalk.blueBright(highscores[1].name + ' ' + highscores[1].score));
     console.log(chalk.blueBright('-------------------------------------'));
-  } else if (score === 2) {
+  } else if (score === 4) {
     console.log(chalk.blueBright('Congrats, you scored well!'));
     console.log(chalk.blueBright('----------------------'));
     console.log('');
@@ -87,7 +93,7 @@ function final() {
     console.log(chalk.blueBright(username + ' ' + score));
     console.log(chalk.blueBright(highscores[1].name + ' ' + highscores[1].score));
     console.log(chalk.blueBright('-------------------------------------'));
-  } else if (score === 1) {
+  } else if (score === 3 || score === 2) {
     console.log(chalk.blueBright('Huh, You don\'t know Iron Man that well'));
     console.log(chalk.blueBright('----------------------'));
     console.log('');
@@ -97,7 +103,7 @@ function final() {
     console.log(chalk.blueBright(highscores[1].name + ' ' + highscores[1].score));
     console.log(chalk.blueBright(username + ' ' + score));
     console.log(chalk.blueBright('-------------------------------------'));
-  } else if (score === 0) {
+  } else if (score === 1 || score === 0) {
     console.log(chalk.blueBright('Do you even know Iron Man?'));
     console.log(chalk.blueBright('----------------------'));
     console.log('');
